@@ -1,0 +1,34 @@
+﻿<Window x:Class="MefLab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MefLab"
+        mc:Ignorable="d"
+        Title="NeverSinks WPF rapid prototyping" Height="650" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <ComboBox Name="ProjectSource" HorizontalAlignment="Center" Margin="10,26,0,0" VerticalAlignment="Center" Width="450" ItemsSource="{Binding ModuleSelectSubSet}" SelectedItem="{Binding SelectedMod}" KeyDown="ProjectSource_KeyDown" />
+        </StackPanel>
+        <StackPanel Grid.Row="2" Name="InputFieldStackPanel">
+            <Label>Inputs:</Label>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Name="OutputFieldStackPanel">
+            <Label>Outputs:</Label>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Name="ButtonStackPanel" HorizontalAlignment="Center" Width="400"/>
+        <StackPanel Grid.Row="7" Name="ConfigurationStackPanel">
+            <Label>Timing:</Label>
+        </StackPanel>
+    </Grid>
+</Window>
